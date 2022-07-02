@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/19b1cd51f5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>FeT4</title>
@@ -16,38 +15,36 @@
 
 <body>
     <div id="app" style="width: 300px" class="border containter-fluid m-2">
-        <div class="row justify-content-center m-2">
-            <div class="col-12 text-right">{{hist}}I</div>
+        <div style="height: 2em;" class="row justify-content-center mx-2 mt-2 text-white bg-dark">
+            <div class="col-12 text-right">{{hist}}</div>
         </div>
-        <div class="row justify-content-center m-2">
-            <div class="col-12 text-right">
-                {{digit}}I
-            </div>
+        <div style="height: 2em;" class="row justify-content-center mx-2 mb-2 text-white bg-dark">
+            <div id="display" class="col-12 text-right">{{digit}}</div>
         </div>
         <div class="row mx-2">
-            <button class="col-6">AC</button>
-            <button class="col-3">/</button>
-            <button class="col-3">x</button>
+            <button id="clear" class="col-6" @click="stroke('AC')">AC</button>
+            <button id="divide" class="col-3" @click="stroke('/')">/</button>
+            <button id="multiply" class="col-3" @click="stroke('x')">x</button>
         </div>
         <div class="row mx-2">
-            <button class="col-3">7</button>
-            <button class="col-3">8</button>
-            <button class="col-3">9</button>
-            <button class="col-3">-</button>
+            <button id="seven" class="col-3" @click="stroke('7')">7</button>
+            <button id="eight" class="col-3" @click="stroke('8')">8</button>
+            <button id="nine" class="col-3" @click="stroke('9')">9</button>
+            <button id="subtract" class="col-3" @click="stroke('-')">-</button>
         </div>
         <div class="row mx-2">
-            <button class="col-3">4</button>
-            <button class="col-3">5</button>
-            <button class="col-3">6</button>
-            <button class="col-3">+</button>
+            <button id="four" class="col-3" @click="stroke('4')">4</button>
+            <button id="five" class="col-3" @click="stroke('5')">5</button>
+            <button id="six" class="col-3" @click="stroke('6')">6</button>
+            <button id="add" class="col-3" @click="stroke('+')">+</button>
         </div>
         <div class="row d-flex flex-wrap mx-2 mb-2">
-            <button style="height: 2em;" class="col-3">1</button>
-            <button style="height: 2em;" class="col-3">2</button>
-            <button style="height: 2em;" class="col-3">3</button>
-            <button style="height: 4em;" class="col-3">=</button>
-            <button style="height: 2em; margin-top: -2em;"class="col-6">0</button>
-            <button style="height: 2em; margin-top: -2em;"class="col-3">.</button>
+            <button id="one" style="height: 2em;" class="col-3" @click="stroke('1')">1</button>
+            <button id="two" style="height: 2em;" class="col-3" @click="stroke('2')">2</button>
+            <button id="three" style="height: 2em;" class="col-3" @click="stroke('3')">3</button>
+            <button id="equals" style="height: 4em;" class="col-3" @click="stroke('=')">=</button>
+            <button id="zero" style="height: 2em; margin-top: -2em;" class="col-6" @click="stroke('0')">0</button>
+            <button id="decimal" style="height: 2em; margin-top: -2em;" class="col-3" @click="stroke('.')">.</button>
         </div>
 
     </div>
@@ -68,6 +65,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- TEST SCRIPT -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
