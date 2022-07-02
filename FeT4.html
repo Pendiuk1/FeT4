@@ -14,7 +14,7 @@
 
 
 <body>
-    <div id="app" style="width: 300px" class="border containter-fluid m-2">
+    <div id="app" style="width: 300px; background-color: darkgray;" class="containter-fluid m-2 p-2 ">
         <div style="height: 2em;" class="row justify-content-center mx-2 mt-2 text-white bg-dark">
             <div class="col-12 text-right">{{hist}}</div>
         </div>
@@ -22,29 +22,29 @@
             <div id="display" class="col-12 text-right">{{digit}}</div>
         </div>
         <div class="row mx-2">
-            <button id="clear" class="col-6" @click="stroke('AC')">AC</button>
-            <button id="divide" class="col-3" @click="stroke('/')">/</button>
-            <button id="multiply" class="col-3" @click="stroke('x')">x</button>
+            <button id="clear" class="col-6 btn-outline-danger" @click="stroke('AC')">AC</button>
+            <button id="divide" class="col-3 btn-secondary" @click="stroke('/')">/</button>
+            <button id="multiply" class="col-3 btn-secondary" @click="stroke('x')">x</button>
         </div>
         <div class="row mx-2">
-            <button id="seven" class="col-3" @click="stroke('7')">7</button>
-            <button id="eight" class="col-3" @click="stroke('8')">8</button>
-            <button id="nine" class="col-3" @click="stroke('9')">9</button>
-            <button id="subtract" class="col-3" @click="stroke('-')">-</button>
+            <button id="seven" class="col-3 btn-primary" @click="stroke('7')">7</button>
+            <button id="eight" class="col-3 btn-primary" @click="stroke('8')">8</button>
+            <button id="nine" class="col-3 btn-primary" @click="stroke('9')">9</button>
+            <button id="subtract" class="col-3 btn-secondary" @click="stroke('-')">-</button>
         </div>
         <div class="row mx-2">
-            <button id="four" class="col-3" @click="stroke('4')">4</button>
-            <button id="five" class="col-3" @click="stroke('5')">5</button>
-            <button id="six" class="col-3" @click="stroke('6')">6</button>
-            <button id="add" class="col-3" @click="stroke('+')">+</button>
+            <button id="four" class="col-3 btn-primary" @click="stroke('4')">4</button>
+            <button id="five" class="col-3 btn-primary" @click="stroke('5')">5</button>
+            <button id="six" class="col-3 btn-primary" @click="stroke('6')">6</button>
+            <button id="add" class="col-3 btn-secondary" @click="stroke('+')">+</button>
         </div>
         <div class="row d-flex flex-wrap mx-2 mb-2">
-            <button id="one" style="height: 2em;" class="col-3" @click="stroke('1')">1</button>
-            <button id="two" style="height: 2em;" class="col-3" @click="stroke('2')">2</button>
-            <button id="three" style="height: 2em;" class="col-3" @click="stroke('3')">3</button>
-            <button id="equals" style="height: 4em;" class="col-3" @click="stroke('=')">=</button>
-            <button id="zero" style="height: 2em; margin-top: -2em;" class="col-6" @click="stroke('0')">0</button>
-            <button id="decimal" style="height: 2em; margin-top: -2em;" class="col-3" @click="stroke('.')">.</button>
+            <button id="one" style="height: 2em;" class="col-3 btn-primary" @click="stroke('1')">1</button>
+            <button id="two" style="height: 2em;" class="col-3 btn-primary" @click="stroke('2')">2</button>
+            <button id="three" style="height: 2em;" class="col-3 btn-primary" @click="stroke('3')">3</button>
+            <button id="equals" style="height: 4em;" class="col-3 btn-info" @click="stroke('=')">=</button>
+            <button id="zero" style="height: 2em; margin-top: -2em;" class="col-6 btn-primary" @click="stroke('0')">0</button>
+            <button id="decimal" style="height: 2em; margin-top: -2em;" class="col-3 btn-secondary" @click="stroke('.')">.</button>
         </div>
 
     </div>
